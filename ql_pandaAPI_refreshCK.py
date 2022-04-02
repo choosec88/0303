@@ -51,11 +51,11 @@ def getckitem(key):
 
 
 def genToken(wsCookie):
-    url = "https://api.jds.codes/jd/gentoken"
+    url = "https://me-api.jd.com/user_new/info/GetJDUserInfoUnion"
     body = {"url": "https://home.m.jd.com/myJd/newhome.action"}
     headers = {
         "user-agent": "Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OTc2MjQ1NDU0LCJpYXQiOjE2NDg4OTIwOTIsImV4cCI6MTY4MDQyODA5Mn0.TNa2MGIC5OnWfE3ODIj50j-GtzoBOB5Papcub7SMFeE"
+        "Content-Type":"application/json"
     }
     r = requests.post(url, headers=headers, data=json.dumps(body))
     r = json.loads(r.text)
