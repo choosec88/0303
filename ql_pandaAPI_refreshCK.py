@@ -56,7 +56,7 @@ def genToken(wsCookie):
     headers = {
         "user-agent": "Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36",
         "Content-Type":"application/json",
-        'Authorization':'Bearer' eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OTc2MjQ1NDU0LCJpYXQiOjE2NDg4ODg1MzYsImV4cCI6MTY4MDQyNDUzNn0.UYXPKoUcJX-JpmryR1wBhcpc7qD_Dw7t_n1dwJT_jUw
+        'Authorization':'Bearer' + eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OTc2MjQ1NDU0LCJpYXQiOjE2NDg4ODg1MzYsImV4cCI6MTY4MDQyNDUzNn0.UYXPKoUcJX-JpmryR1wBhcpc7qD_Dw7t_n1dwJT_jUw
     }
     r = requests.post(url, headers=headers, data=json.dumps(body))
     r = json.loads(r.text)
